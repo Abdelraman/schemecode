@@ -47,25 +47,21 @@
 
                         <table class="table table-hover">
                             <tr>
-                                <th>@lang('site.image')</th>
                                 <th>@lang('site.name')</th>
-                                <th>@lang('site.description')</th>
+                                <th>@lang('site.email')</th>
+                                <th>@lang('site.subject')</th>
+                                <th>@lang('site.message')</th>
                                 <th>@lang('site.action')</th>
                             </tr>
 
                             @foreach ($contact_us_requests as $contact_us_request)
 
                                 <tr>
-                                    <td><img src="{{ $contact_us_request->image_path }}" style="width: 100px" class="img-thumbnail" alt=""></td>
                                     <td>{{ $contact_us_request->name }}</td>
-                                    <td>{{ $contact_us_request->description }}</td>
+                                    <td>{{ $contact_us_request->email }}</td>
+                                    <td>{{ $contact_us_request->subject }}</td>
+                                    <td>{{ $contact_us_request->message }}</td>
                                     <td>
-                                        @if (auth()->user()->hasPermission('update_contact_us_requests'))
-                                            <a href="{{ route('dashboard.contact_us_requests.edit', $contact_us_request->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> @lang('site.edit')</a>
-                                        @else
-                                            <a href="#" disabled class="btn btn-warning btn-sm"><i class="fa fa-edit"></i> @lang('site.edit')</a>
-                                        @endif
-
                                         @if (auth()->user()->hasPermission('delete_contact_us_requests'))
                                             <form action="{{ route('dashboard.contact_us_requests.destroy', $contact_us_request->id) }}" method="post" style="display: inline-block;">
                                                 {{ csrf_field() }}

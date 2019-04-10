@@ -20,6 +20,7 @@ return [
     'added_successfully' => 'Data added successfully',
     'updated_successfully' => 'Data updated successfully',
     'deleted_successfully' => 'Data deleted successfully',
+    'message_sent_successfully' => 'Message sent successfully',
 
     'team_members' => 'Team members',
     'team_member' => 'Team member',
@@ -30,6 +31,8 @@ return [
     'contact_us_requests' => 'Contact us requests',
     'contact_us_request' => 'Contact us request',
     'contact_us_description' => 'Contact us description',
+    'subject' => 'Subject',
+    'message' => 'Message',
 
     'site_settings' => 'Site Settings',
     'name' => 'Name',
