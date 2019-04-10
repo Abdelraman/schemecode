@@ -2,25 +2,24 @@
 
 namespace App\Http\Controllers\Dashboard;
 
+use App\ContactUsRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class ContactUsRequestController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        return view('');
+        $contact_us_requests = ContactUsRequest::when($request->search, function ($q) use ($request) {
+
+            return $q->where('name', 'like', '%' . $request->search . '%')
+                ->orWhere('email', 'like', '%' . $request->search . '%')
+                ->orWhere('subject', 'like', '%' . $request->search . '%');
+
+        })->paginate(5);
+
+        return view('dashboard.contact_us_requests.index', compact('contact_us_requests'));
 
     }//end of index
-
-    public function create()
-    {
-
-    }//end of create
-
-    public function store()
-    {
-
-    }//end of store
 
 }//end of controller
