@@ -21,5 +21,13 @@ class ContactUsRequestController extends Controller
         return view('dashboard.contact_us_requests.index', compact('contact_us_requests'));
 
     }//end of index
+    
+    public function destroy(ContactUsRequest $contact_us_request)
+    {
+        $contact_us_request->delete();
+        session()->flash('success', __('site.deleted_successfully'));
+        return redirect()->route('dashboard.contact_us_requests.index');
+
+    }//end of delete
 
 }//end of controller

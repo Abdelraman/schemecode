@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'WelcomeController@index')->name('welcome');
 
 Auth::routes(['register' => false]);
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('contact_us_requests', 'ContactUsRequestController')->only(['store']);
