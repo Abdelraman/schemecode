@@ -40,27 +40,15 @@
 <header id="home">
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
-            <div class="item active" style="background-image: url(images/slider/1.jpg)">
+            @foreach($sliders as $index => $slider)
+            <div class="item {{$index == 0 ? 'active' : ''}}" style="background-image: url({{$slider->image_path}})">
                 <div class="caption">
-                    <h1 class="animated fadeInLeftBig">Welcome to <span>Oxygen</span></h1>
-                    <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
+                    <h1 class="animated fadeInLeftBig">{{$slider->title}} <span>{{$slider->last_word}}</span></h1>
+                    <p class="animated fadeInRightBig">{{$slider->description}}</p>
                     <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
                 </div>
             </div>
-            <div class="item" style="background-image: url(images/slider/2.jpg)">
-                <div class="caption">
-                    <h1 class="animated fadeInLeftBig">Say Hello to <span>Oxygen</span></h1>
-                    <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-                    <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-                </div>
-            </div>
-            <div class="item" style="background-image: url(images/slider/3.jpg)">
-                <div class="caption">
-                    <h1 class="animated fadeInLeftBig">We are <span>Creative</span></h1>
-                    <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p>
-                    <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
-                </div>
-            </div>
+            @endforeach
         </div>
         <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
         <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
@@ -217,174 +205,29 @@
     </div>
     <div class="container-fluid">
         <div class="row">
+            @foreach($projects as $project)
             <div class="col-sm-3">
                 <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/1.jpg" alt="">
+                        <img class="img-responsive" src="{{$project->image_path}}" alt="">
                     </div>
                     <div class="overlay">
                         <div class="overlay-content">
                             <div class="overlay-text">
                                 <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
+                                    <h3>{{$project->title}}</h3>
+                                    <p>{{$project->description}}</p>
                                 </div>
                                 <div class="folio-overview">
                                     <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                                    <span class="folio-expand"><a href="{{$project->image_path}}" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/2.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="500ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/3.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="600ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/4.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="700ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/5.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="800ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/6.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="900ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/7.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="1000ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="images/portfolio/8.jpg" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>Time Hours</h3>
-                                    <p>Design, Photography</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="images/portfolio/portfolio-details.jpg" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div id="portfolio-single-wrap">

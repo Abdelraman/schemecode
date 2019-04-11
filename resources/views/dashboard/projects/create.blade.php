@@ -43,7 +43,7 @@
                         {{--description--}}
                         <div class="form-group">
                             <label>@lang('site.description')</label>
-                            <textarea name="description" class="form-control ckeditor" id="editor">{{ old('description') }}</textarea>
+                            <textarea name="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                         </div>
 
                         {{--link--}}
