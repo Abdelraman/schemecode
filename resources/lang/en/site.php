@@ -28,6 +28,10 @@ return [
     'title' => 'Title',
     'description' => 'Description',
 
+    'blog_posts' => 'Blog posts',
+    'blog_post' => 'Blog post',
+    'body' => 'Body',
+
     'contact_us_requests' => 'Contact us requests',
     'contact_us_request' => 'Contact us request',
     'contact_us_description' => 'Contact us description',
@@ -44,6 +48,7 @@ return [
     'facebook_link' => 'Facebook Link',
     'twitter_link' => 'Twitter Link',
     'linkedin_link' => 'LinkedIn Link',
+
     'sliders' => 'Sliders',
     'projects' => 'Projects',
     'link' => 'Link',
