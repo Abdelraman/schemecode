@@ -67,7 +67,7 @@ class SliderController extends Controller
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'image' => 'required|image',
+            'image' => 'image',
         ]);
 
         $request_data = $request->except(['image']);
