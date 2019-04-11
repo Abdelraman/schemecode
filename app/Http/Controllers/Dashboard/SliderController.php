@@ -96,3 +96,5 @@ class SliderController extends Controller
     }//end of delete
 
 }//end of controller
+
+
