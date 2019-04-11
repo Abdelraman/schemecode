@@ -44,4 +44,7 @@ return [
     'facebook_link' => 'Facebook Link',
     'twitter_link' => 'Twitter Link',
     'linkedin_link' => 'LinkedIn Link',
+    'sliders' => 'Sliders',
+    'projects' => 'Projects',
+    'link' => 'Link',
 ];

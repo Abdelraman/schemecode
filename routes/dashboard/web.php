@@ -17,4 +17,10 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(func
     //site settings
     Route::resource('site_settings', 'SiteSettingController')->only(['create', 'store']);
 
+    //slider route
+    Route::resource('sliders', 'SliderController');
+
+    //project routes
+    Route::resource('projects', 'ProjectController');
+
 });
