@@ -15,9 +15,24 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-th"></i><span>@lang('site.main')</span></a></li>
 
+            {{--sliders--}}
+            @if (auth()->user()->hasPermission('read_sliders'))
+                <li><a href="{{ route('dashboard.sliders.index') }}"><i class="fa fa-th"></i><span>@lang('site.sliders')</span></a></li>
+            @endif
+
+            {{--projects--}}
+            @if (auth()->user()->hasPermission('read_projects'))
+                <li><a href="{{ route('dashboard.projects.index') }}"><i class="fa fa-th"></i><span>@lang('site.projects')</span></a></li>
+            @endif
+
             {{--team members--}}
             @if (auth()->user()->hasPermission('read_team_members'))
                 <li><a href="{{ route('dashboard.team_members.index') }}"><i class="fa fa-th"></i><span>@lang('site.team_members')</span></a></li>
+            @endif
+
+            {{--blog posts--}}
+            @if (auth()->user()->hasPermission('read_blog_posts'))
+                <li><a href="{{ route('dashboard.blog_posts.index') }}"><i class="fa fa-th"></i><span>@lang('site.blog_posts')</span></a></li>
             @endif
 
             {{--cotact us requests--}}
