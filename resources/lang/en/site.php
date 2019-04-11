@@ -28,6 +28,7 @@ return [
     'description' => 'Description',
 
     'contact_us_requests' => 'Contact us requests',
+    'contact_us_request' => 'Contact us request',
     'contact_us_description' => 'Contact us description',
 
     'site_settings' => 'Site Settings',

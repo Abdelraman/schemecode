@@ -6,7 +6,7 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(func
     Route::get('/index', 'DashboardController@index')->name('index');
 
     //contact us requests
-    Route::resource('contact_us_requests', 'ContactUsRequestController');
+    Route::resource('contact_us_requests', 'ContactUsRequestController')->only(['index', 'destroy']);
 
     //team members
     Route::resource('team_members', 'TeamMemberController');
