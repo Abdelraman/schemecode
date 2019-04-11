@@ -11,6 +11,9 @@ Route::prefix('dashboard')->name('dashboard.')->middleware(['auth'])->group(func
     //team members
     Route::resource('team_members', 'TeamMemberController');
 
+    //blog posts
+    Route::resource('blog_posts', 'BlogPostController');
+
     //site settings
     Route::resource('site_settings', 'SiteSettingController')->only(['create', 'store']);
 
