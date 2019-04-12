@@ -43,8 +43,8 @@
             @foreach($sliders as $index => $slider)
             <div class="item {{$index == 0 ? 'active' : ''}}" style="background-image: url({{$slider->image_path}})">
                 <div class="caption">
-                    <h1 class="animated fadeInLeftBig">{{$slider->title}} <span>{{$slider->last_word}}</span></h1>
-                    <p class="animated fadeInRightBig">{{$slider->description}}</p>
+                    <h1 class="animated fadeInLeftBig">{{ $slider->title_without_last_word }} <span>{{ $slider->last_word }}</span></h1>
+                    <p class="animated fadeInRightBig">{!! $slider->description !!}</p>
                     <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
                 </div>
             </div>

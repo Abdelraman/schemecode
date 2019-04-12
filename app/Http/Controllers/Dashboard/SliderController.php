@@ -32,7 +32,6 @@ class SliderController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'last_word' => 'required',
             'description' => 'required',
             'image' => 'required|image',
         ]);
@@ -67,7 +66,6 @@ class SliderController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'last_word' => 'required',
             'description' => 'required',
             'image' => 'image',
         ]);

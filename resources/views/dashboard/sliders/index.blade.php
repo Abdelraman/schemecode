@@ -56,8 +56,8 @@
                             @foreach ($sliders as $slider)
 
                                 <tr>
-                                    <td>{{ $slider->title . $slider->last_word}}</td>
-                                    <td>{{$slider->description}}</td>
+                                    <td>{{ $slider->title }}</td>
+                                    <td>{!! $slider->description !!}</td>
                                     <td><img src="{{ $slider->image_path }}" style="width: 100px" class="img-thumbnail" alt=""></td>
                                     <td>
                                         <a href="{{ route('dashboard.sliders.edit', $slider->id) }}" class="btn btn-warning btn-sm"><i class="fa fa-pencil"></i> @lang('site.edit')</a>
