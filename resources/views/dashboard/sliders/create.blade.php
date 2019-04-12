@@ -40,10 +40,16 @@
                             <input type="text" name="title" class="form-control" value="{{ old('title') }}">
                         </div>
 
+                        {{--last_word--}}
+                        <div class="form-group">
+                            <label>@lang('site.last_word')</label>
+                            <input type="text" name="last_word" class="form-control" value="{{ old('last_word') }}">
+                        </div>
+
                         {{--description--}}
                         <div class="form-group">
                             <label>@lang('site.description')</label>
-                            <textarea name="description" class="form-control ckeditor" id="editor">{{ old('description') }}</textarea>
+                            <textarea name="description" class="form-control" rows="5">{{ old('description') }}</textarea>
                         </div>
 
                         {{--image--}}

@@ -52,4 +52,5 @@ return [
     'sliders' => 'Sliders',
     'projects' => 'Projects',
     'link' => 'Link',
+    'last_word' => 'Last Word',
 ];

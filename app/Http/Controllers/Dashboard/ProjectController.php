@@ -69,7 +69,7 @@ class ProjectController extends Controller
             'title' => 'required',
             'description' => 'required',
             'link' => 'required|url',
-            'image' => 'required|image',
+            'image' => 'image',
 
         ]);
 

@@ -57,7 +57,7 @@
 
                                 <tr>
                                     <td>{{ $project->title }}</td>
-                                    <td>{!! $project->description  !!}</td>
+                                    <td>{{$project->description}}</td>
                                     <td>{{ $project->link }}</td>
                                     <td><img src="{{ $project->image_path }}" style="width: 100px" class="img-thumbnail" alt=""></td>
                                     <td>
