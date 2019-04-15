@@ -36,7 +36,14 @@
 
                         {{--icon--}}
                         <div class="form-group">
-                            <div  role="iconpicker" data-iconset="fontawesome4" data-iconset-version="4.7.0" data-rows="5" data-cols="10" data-icon="" name="icon"></div>
+                            <div  role="iconpicker"
+                                  data-iconset="fontawesome4"
+                                  data-iconset-version="4.7.0"
+                                  data-rows="5"
+                                  data-cols="10"
+                                  data-arrow-prev-icon-class="fa fa-arrow-left"
+                                  data-arrow-next-icon-class="fa fa-arrow-right"
+                                  name="icon"></div>
                         </div>
 
                         {{--title--}}
