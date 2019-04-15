@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="{{ asset('dashboard/css/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard/css/skin-blue.min.css') }}">
 
-    @if (app()->getLocale() == 'ar')
+    <!-- Bootstrap-Iconpicker -->
+    <link rel="stylesheet" href="{{ asset('dashboard/plugins/icon-picker/bootstrap-iconpicker.min.css') }}"/>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
+
+@if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('dashboard/css/font-awesome-rtl.min.css') }}">
         <link rel="stylesheet" href="{{ asset('dashboard/css/AdminLTE-rtl.min.css') }}">
         <link href="https://fonts.googleapis.com/css?family=Cairo:400,700" rel="stylesheet">
@@ -222,6 +227,9 @@
 {{--ckeditor--}}
 <script src="{{ asset('dashboard/plugins/ckeditor/ckeditor.js') }}"></script>
 
+{{--icon picker--}}
+<script type="text/javascript" src="{{ asset('dashboard/plugins/icon-picker/bootstrap-iconpicker.bundle.min.js') }}"></script>
+
 <script>
     $(document).ready(function () {
         $('.sidebar-menu').tree();
@@ -259,6 +267,12 @@
 
     })
 
+    $('#target').iconpicker({
+        cols: 10,
+        rows: 5,
+        align: 'left', // Only in div tag
+        iconset: 'fontawesome4.7'
+    })
 
 </script>
 </body>

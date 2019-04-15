@@ -20,6 +20,11 @@
                 <li><a href="{{ route('dashboard.sliders.index') }}"><i class="fa fa-th"></i><span>@lang('site.sliders')</span></a></li>
             @endif
 
+            {{--services--}}
+            @if (auth()->user()->hasPermission('read_services'))
+                <li><a href="{{ route('dashboard.services.index') }}"><i class="fa fa-th"></i><span>@lang('site.services')</span></a></li>
+            @endif
+
             {{--projects--}}
             @if (auth()->user()->hasPermission('read_projects'))
                 <li><a href="{{ route('dashboard.projects.index') }}"><i class="fa fa-th"></i><span>@lang('site.projects')</span></a></li>

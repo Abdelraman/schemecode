@@ -79,6 +79,18 @@
                             <textarea name="contact_us_description" class="form-control ckeditor">{{ setting('contact_us_description') }}</textarea>
                         </div>
 
+                        {{--google maps lng--}}
+                        <div class="form-group">
+                            <label>@lang('site.google_maps_lng')</label>
+                            <input type="text" name="google_maps_lng" class="form-control" value="{{ setting('google_maps_lng') }}">
+                        </div>
+
+                        {{--google maps lat--}}
+                        <div class="form-group">
+                            <label>@lang('site.google_maps_lat')</label>
+                            <input type="text" name="google_maps_lat" class="form-control" value="{{ setting('google_maps_lat') }}">
+                        </div>
+
                         {{--facebook link--}}
                         <div class="form-group">
                             <label>@lang('site.facebook_link')</label>

@@ -45,6 +45,8 @@ return [
     'email' => 'Email',
     'address' => 'Address',
     'about_us' => 'About Us',
+    'google_maps_lng' => 'Google maps longitude',
+    'google_maps_lat' => 'Google maps latitude',
     'facebook_link' => 'Facebook Link',
     'twitter_link' => 'Twitter Link',
     'linkedin_link' => 'LinkedIn Link',
@@ -53,4 +55,7 @@ return [
     'projects' => 'Projects',
     'link' => 'Link',
     'last_word' => 'Last Word',
+
+    'services' => 'Services',
+    'icon' => 'Icon',
 ];
