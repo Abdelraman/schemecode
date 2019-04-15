@@ -259,7 +259,6 @@
             <div class="row">
                 <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                     <h2>Contact Us</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
                 </div>
             </div>
             <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
