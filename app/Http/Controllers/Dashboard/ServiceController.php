@@ -30,7 +30,6 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
         $request->validate([
             'icon' => 'required',
             'title' => 'required',

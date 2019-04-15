@@ -36,7 +36,7 @@
 
                         {{--icon--}}
                         <div class="form-group">
-                            <div  role="iconpicker" data-iconset="fontawesome4.7" data-rows="5" data-cols="10" data-icon=""></div>
+                            <div  role="iconpicker" data-iconset="fontawesome4" data-iconset-version="4.7.0" data-rows="5" data-cols="10" data-icon="" name="icon"></div>
                         </div>
 
                         {{--title--}}

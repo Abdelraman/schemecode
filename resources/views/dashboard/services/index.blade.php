@@ -50,12 +50,13 @@
                                 <th>@lang('site.icon')</th>
                                 <th>@lang('site.title')</th>
                                 <th>@lang('site.description')</th>
+                                <th>@lang('site.action')</th>
                             </tr>
 
                             @foreach ($services as $service)
 
                                 <tr>
-                                    <td>{{ $service->icon }}</td>
+                                    <td><i class="fa {{ $service->icon }} fa-3x"></i></td>
                                     <td>{{ $service->title }}</td>
                                     <td>{{$service->description}}</td>
                                     <td>

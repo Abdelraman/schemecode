@@ -36,9 +36,9 @@
 
                         {{--icon--}}
                         <div class="form-group">
-                            <button class="btn btn-secondary" role="iconpicker"></button>
+                            <div role="iconpicker" data-icon="{{ $service->icon }}" data-iconset="fontawesome4" data-iconset-version="4.7.0" data-rows="5" data-cols="10" data-icon="" name="icon"></div>
                         </div>
-
+                        
                         {{--title--}}
                         <div class="form-group">
                             <label>@lang('site.title')</label>

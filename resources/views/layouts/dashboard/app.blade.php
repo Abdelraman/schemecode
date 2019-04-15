@@ -14,8 +14,6 @@
     <!-- Bootstrap-Iconpicker -->
     <link rel="stylesheet" href="{{ asset('dashboard/plugins/icon-picker/bootstrap-iconpicker.min.css') }}"/>
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"/>
-
 @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('dashboard/css/font-awesome-rtl.min.css') }}">
         <link rel="stylesheet" href="{{ asset('dashboard/css/AdminLTE-rtl.min.css') }}">
@@ -265,13 +263,6 @@
 
         });//end of delete
 
-    })
-
-    $('#target').iconpicker({
-        cols: 10,
-        rows: 5,
-        align: 'left', // Only in div tag
-        iconset: 'fontawesome4.7'
     })
 
 </script>
