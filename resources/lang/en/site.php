@@ -44,6 +44,7 @@ return [
     'phone' => 'Phone',
     'email' => 'Email',
     'address' => 'Address',
+    'website' => 'Website',
     'about_us' => 'About Us',
     'google_maps_api_key' => 'Google maps api key',
     'google_maps_lng' => 'Google maps longitude',

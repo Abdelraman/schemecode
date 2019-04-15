@@ -67,6 +67,12 @@
                             <input type="phone" name="phone" class="form-control" value="{{ setting('phone') }}">
                         </div>
 
+                        {{--website--}}
+                        <div class="form-group">
+                            <label>@lang('site.website')</label>
+                            <input type="text" name="website" class="form-control" value="{{ setting('website') }}">
+                        </div>
+
                         {{--address--}}
                         <div class="form-group">
                             <label>@lang('site.address')</label>
