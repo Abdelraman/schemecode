@@ -45,6 +45,7 @@ return [
     'email' => 'Email',
     'address' => 'Address',
     'about_us' => 'About Us',
+    'google_maps_api_key' => 'Google maps api key',
     'google_maps_lng' => 'Google maps longitude',
     'google_maps_lat' => 'Google maps latitude',
     'facebook_link' => 'Facebook Link',

@@ -19,7 +19,7 @@
     <script src="{{ asset('js/respond.min.js') }}"></script>
     <![endif]-->
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
 
     {{--favicon--}}
     <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
@@ -336,7 +336,7 @@
 
 <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true&key=AIzaSyDrUky6selYPSYwknYNAUmn2AytetF-LYE"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=true&key={{ setting('google_maps_api_key') }}"></script>
 <script type="text/javascript" src="{{ asset('js/jquery.inview.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/wow.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/mousescroll.js') }}"></script>
@@ -345,5 +345,33 @@
 <script type="text/javascript" src="{{ asset('js/lightbox.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
 
+<script>
+    //Google Map
+    var latitude = "{{ setting('google_maps_lat') }}";
+    var longitude = "{{ setting('google_maps_lng') }}";
+
+    function initialize_map() {
+        var myLatlng = new google.maps.LatLng(latitude, longitude);
+        var mapOptions = {
+            zoom: 17,
+            scrollwheel: false,
+            center: myLatlng
+        };
+        var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+        var contentString = '';
+        var infowindow = new google.maps.InfoWindow({
+            content: '<div class="map-content"><ul class="address">' + $('.address').html() + '</ul></div>'
+        });
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map
+        });
+        google.maps.event.addListener(marker, 'click', function () {
+            infowindow.open(map, marker);
+        });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize_map);
+</script>
 </body>
 </html>

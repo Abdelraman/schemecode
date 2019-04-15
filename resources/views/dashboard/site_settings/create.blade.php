@@ -36,7 +36,7 @@
                         {{--name--}}
                         <div class="form-group">
                             <label>@lang('site.name')</label>
-                            <input type="text" name="name" class="form-control" value="{{ setting('name') }}" required>
+                            <input type="text" name="name" class="form-control" value="{{ setting('name') }}">
                         </div>
 
                         @if (setting('logo'))
@@ -77,6 +77,12 @@
                         <div class="form-group">
                             <label>@lang('site.contact_us_description')</label>
                             <textarea name="contact_us_description" class="form-control ckeditor">{{ setting('contact_us_description') }}</textarea>
+                        </div>
+
+                        {{--google maps lng--}}
+                        <div class="form-group">
+                            <label>@lang('site.google_maps_api_key')</label>
+                            <input type="text" name="google_maps_api_key" class="form-control" value="{{ setting('google_maps_api_key') }}">
                         </div>
 
                         {{--google maps lng--}}
