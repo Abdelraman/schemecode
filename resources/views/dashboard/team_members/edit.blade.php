@@ -76,6 +76,12 @@
                             <input type="text" name="twitter_link" class="form-control" value="{{ $team_member->twitter_link }}">
                         </div>
 
+                        {{--twitter link--}}
+                        <div class="form-group">
+                            <label>@lang('site.linkedin_link')</label>
+                            <input type="text" name="linkedin_link" class="form-control" value="{{ $team_member->linkedin_link }}">
+                        </div>
+
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary"><i class="fa fa-pencil"></i> @lang('site.edit')</button>
                         </div>

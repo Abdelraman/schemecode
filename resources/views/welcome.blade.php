@@ -74,8 +74,8 @@
                     <li class="scroll active"><a href="#home">Home</a></li>
                     <li class="scroll"><a href="#services">Service</a></li>
                     <li class="scroll"><a href="#about-us">About Us</a></li>
-                    <li class="scroll"><a href="#portfolio">Portfolio</a></li>
-                    <li class="scroll"><a href="#team">Team</a></li>
+                    <li class="scroll"><a href="#portfolio">Latest Projects</a></li>
+                    <li class="scroll"><a href="#team">Our Team</a></li>
                     {{--<li class="scroll"><a href="#blog">Blog</a></li>--}}
                     <li class="scroll"><a href="#contact">Contact</a></li>
                 </ul>
@@ -155,7 +155,7 @@
     <div class="container">
         <div class="row">
             <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-                <h2>Our Portfolio</h2>
+                <h2>Latest Projects</h2>
             </div>
         </div>
     </div>
@@ -196,7 +196,7 @@
     <div class="container">
         <div class="row">
             <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
-                <h2>The Team</h2>
+                <h2>Our Team</h2>
             </div>
         </div>
         <div class="team-members">
