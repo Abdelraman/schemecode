@@ -41,13 +41,13 @@
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner">
             @foreach($sliders as $index => $slider)
-            <div class="item {{$index == 0 ? 'active' : ''}}" style="background-image: url({{$slider->image_path}})">
-                <div class="caption">
-                    <h1 class="animated fadeInLeftBig">{{ $slider->title_without_last_word }} <span>{{ $slider->last_word }}</span></h1>
-                    <p class="animated fadeInRightBig">{!! $slider->description !!}</p>
-                    <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+                <div class="item {{$index == 0 ? 'active' : ''}}" style="background-image: url({{$slider->image_path}})">
+                    <div class="caption">
+                        <h1 class="animated fadeInLeftBig">{{ $slider->title_without_last_word }} <span>{{ $slider->last_word }}</span></h1>
+                        <p class="animated fadeInRightBig">{!! $slider->description !!}</p>
+                        <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a>
+                    </div>
                 </div>
-            </div>
             @endforeach
         </div>
         <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
@@ -66,7 +66,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{{ route('welcome') }}" style="padding: 0;">
-                    <img class="img-responsive" id="logo" src="images/wide.png" style="";" alt="logo">
+                    <img class="img-responsive" id="logo" src="images/wide.png" style="" ;" alt="logo">
                 </a>
             </div>
             <div class="collapse navbar-collapse">
@@ -159,30 +159,31 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid">
         <div class="row">
             @foreach($projects as $project)
-            <div class="col-sm-3">
-                <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
-                    <div class="folio-image">
-                        <img class="img-responsive" src="{{$project->image_path}}" alt="">
-                    </div>
-                    <div class="overlay">
-                        <div class="overlay-content">
-                            <div class="overlay-text">
-                                <div class="folio-info">
-                                    <h3>{{$project->title}}</h3>
-                                    <p>{{$project->description}}</p>
-                                </div>
-                                <div class="folio-overview">
-                                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="portfolio-single.html"><i class="fa fa-link"></i></a></span>
-                                    <span class="folio-expand"><a href="{{$project->image_path}}" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                <div class="col-sm-3">
+                    <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
+                        <div class="folio-image">
+                            <img class="img-responsive" src="{{ $project->image_path}}" alt="">
+                        </div>
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="overlay-text">
+                                    <div class="folio-info">
+                                        <h3>{{ $project->title }}</h3>
+                                        <p>{{ $project->description }}</p>
+                                    </div>
+                                    <div class="folio-overview">
+                                        <span class="folio-link"><a class="" href="{{ $project->link }}" target="_blank"><i class="fa fa-link"></i></a></span>
+                                        <span class="folio-expand"><a href="{{ $project->image_path }}" data-lightbox="portfolio"><i class="fa fa-search-plus"></i></a></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
             @endforeach
         </div>
     </div>
@@ -311,7 +312,7 @@
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
         <div class="container text-center">
             <div class="footer-logo">
-                <a href="index.html"><img class="img-responsive" src="images/wide.png"  style="width: 200px" alt=""></a>
+                <a href="index.html"><img class="img-responsive" src="images/wide.png" style="width: 200px" alt=""></a>
             </div>
             <div class="social-icons">
                 <ul>
