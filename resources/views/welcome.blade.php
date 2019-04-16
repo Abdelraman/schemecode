@@ -254,7 +254,8 @@
 </section><!--/#features-->
 
 <section id="contact">
-    <div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>
+    {{--<div id="google-map" class="wow fadeIn" data-latitude="52.365629" data-longitude="4.871331" data-wow-duration="1000ms" data-wow-delay="400ms"></div>--}}
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.635166734253!2d31.285800915067387!3d29.961170981912712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458384198194bc5%3A0x1052877ecd558f4c!2sGolden+Gate+Tower!5e0!3m2!1sen!2seg!4v1555445284650!5m2!1sen!2seg" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     <div id="contact-us" class="parallax">
         <div class="container">
             <div class="row">
