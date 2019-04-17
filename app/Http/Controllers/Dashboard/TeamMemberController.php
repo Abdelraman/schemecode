@@ -36,6 +36,7 @@ class TeamMemberController extends Controller
             'description' => 'required',
             'facebook_link' => 'required|active_url',
             'twitter_link' => 'required|active_url',
+            'linkedin_link' => 'required|active_url',
         ]);
 
         $request_data = $request->all();
@@ -68,6 +69,7 @@ class TeamMemberController extends Controller
             'description' => 'required',
             'facebook_link' => 'required|active_url',
             'twitter_link' => 'required|active_url',
+            'linkedin_link' => 'required|active_url',
         ]);
 
         $request_data = $request->all();
