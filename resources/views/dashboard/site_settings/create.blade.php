@@ -159,7 +159,7 @@
 
                         {{--og image--}}
                         <div class="form-group">
-                            <label>Social Media Image (used when some one share your link)</label>
+                            <label>Social Media Image (used when some one shares your link)</label>
                             <input type="file" name="og_image" class="form-control">
                         </div>
 
