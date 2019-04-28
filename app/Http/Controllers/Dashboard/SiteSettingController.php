@@ -31,6 +31,18 @@ class SiteSettingController extends Controller
 
         }//end of if
 
+        if ($request->og_image) {
+
+            if (setting('og_image')) {
+
+                Storage::disk('public_uploads')->delete('/uploads/' . setting('og_image'));
+            }
+
+            $request->og_image->store('/uploads', 'public_uploads');
+            $request_data['og_image'] = $request->og_image->hashName();
+
+        }//end of og image
+
         setting($request_data)->save();
         session()->flash('success', __('site.added_successfully'));
         return redirect()->route('dashboard.site_settings.create');

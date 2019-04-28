@@ -25,7 +25,7 @@
 
                     <div class="box-header with-border">
 
-                        <h3 class="box-title">@lang('site.add')</h3>
+                        <h3 class="box-title">@lang('site.site_settings')</h3>
 
                     </div><!-- end of box header -->
 
@@ -39,9 +39,9 @@
                             <input type="text" name="name" class="form-control" value="{{ setting('name') }}">
                         </div>
 
-                        @if (setting('logo'))
-                            <img src="{{ asset('uploads/' . setting('logo')) }}" class="img-thumbnail" style="width: 100px;" alt="">
-                        @endif
+                            @if (setting('logo'))
+                                <img src="{{ asset('uploads/' . setting('logo')) }}" class="img-thumbnail" style="width: 100px;" alt="">
+                            @endif
 
                         {{--logo--}}
                         <div class="form-group">
@@ -119,6 +119,48 @@
                         <div class="form-group">
                             <label>@lang('site.linkedin_link')</label>
                             <input type="url" name="linkedin_link" class="form-control" value="{{ setting('linkedin_link') }}">
+                        </div>
+
+                    </div><!-- end of box body -->
+
+                </div><!-- end of box -->
+
+                <div class="box box-primary">
+
+                    <div class="box-header with-border">
+
+                        <h3 class="box-title">@lang('site.seo')</h3>
+
+                    </div><!-- end of box header -->
+
+                    <div class="box-body ">
+
+                        {{--meta title--}}
+                        <div class="form-group">
+                            <label>Meta title</label>
+                            <input type="text" name="meta_title" class="form-control" value="{{ setting('meta_title') }}">
+                        </div>
+
+                        {{--meta keywords--}}
+                        <div class="form-group">
+                            <label>Meta Keywords (comma separated)</label>
+                            <textarea name="meta_keywords" class="form-control">{{ setting('meta_keywords') }}</textarea>
+                        </div>
+
+                        {{--meta description--}}
+                        <div class="form-group">
+                            <label>Meta Description</label>
+                            <textarea name="meta_description" class="form-control">{{ setting('meta_description') }}</textarea>
+                        </div>
+
+                        @if (setting('og_image'))
+                            <img src="{{ asset('uploads/' . setting('og_image')) }}" class="img-thumbnail" style="width: 100px;" alt="">
+                        @endif
+
+                        {{--og image--}}
+                        <div class="form-group">
+                            <label>Social Media Image (used when some one share your link)</label>
+                            <input type="file" name="og_image" class="form-control">
                         </div>
 
                         <div class="form-group">

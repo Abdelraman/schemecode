@@ -3,8 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="title" content="{{ setting('meta_title') }}">
+    <meta itemprop="name" content="{{ setting('meta_title') }}">
+    <meta name="keywords" content="{{ setting('meta_keywords') }}">
+    <meta itemprop="keywords" content="{{ setting('meta_keywords') }}">
+    <meta name="og:url" content="{{ env('APP_URL') }}">
+    <meta name="og:description" content="{{ setting('meta_description') }}">
+    <meta name="og:type" content="website">
+
+    <meta name="description" content="{{ setting('meta_description') }}">
+    <meta name="og:title" content="{{ setting('meta_title') }}">
+    <meta name="og:image" content="{{ asset('uploads/' . setting('og_image')) }}">
+
+
     <title>SchemeCode</title>
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/animate.min.css') }}" rel="stylesheet">

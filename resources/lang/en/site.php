@@ -52,6 +52,7 @@ return [
     'facebook_link' => 'Facebook Link',
     'twitter_link' => 'Twitter Link',
     'linkedin_link' => 'LinkedIn Link',
+    'seo' => 'Search Engine Optimization',
 
     'sliders' => 'Sliders',
     'projects' => 'Projects',
